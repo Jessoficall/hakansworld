@@ -19,6 +19,7 @@
                 <li><a href="#eglence">Eğlence</a></li>
                 <li><a href="#oyun-videolari">Oyun Videoları</a></li>
                 <li><a href="#haberler">Haberler</a></li>
+                <li><a href="#futbol">Futbol</a></li>
             </ul>
         </nav>
     </header>
@@ -222,6 +223,32 @@
             <div id="video-content" class="toggle-content">
                 <div class="video-container">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+         <section id="futbol">
+            <div class="section-header">
+                <img src="https://placehold.co/60x60?text=⚽" alt="Futbol" class="section-photo">
+                <h2 onclick="toggleSection('futbol-content')" class="toggle-heading">Futbol</h2>
+            </div>
+            <div id="futbol-content" class="toggle-content">
+                <h3 onclick="toggleSection('futbol-bilgiler')" class="toggle-heading">Futbol Hakkında Eğlenceli Bilgiler</h3>
+                <div id="futbol-bilgiler" class="toggle-content">
+                    <ul>
+                        <li>Bir futbol maçında top ortalama 3 km yol kateder.</li>
+                        <li>Dünya Kupası 1930'dan beri düzenleniyor.</li>
+                        <li>Profesyonel futbolcuların şutları saatte 100 km'nin üzerine çıkabilir.</li>
+                        <li>Bir oyuncu maç boyunca ortalama 10 km koşabilir.</li>
+                        <li>Futbol dünya genelinde en popüler spordur.</li>
+                    </ul>
+                </div>
+                <h3 onclick="toggleSection('ronaldo-hayati')" class="toggle-heading">Cristiano Ronaldo</h3>
+                <div id="ronaldo-hayati" class="toggle-content">
+                    <p>Cristiano Ronaldo 1985'te Madeira'da doğdu. Sporting Lizbon altyapısından yetişip Manchester United, Real Madrid ve Juventus gibi kulüplerde yıldızlaştı.</p>
+                </div>
+                <h3 onclick="toggleSection('messi-hayati')" class="toggle-heading">Lionel Messi</h3>
+                <div id="messi-hayati" class="toggle-content">
+                    <p>Lionel Messi 1987'de Arjantin'in Rosario kentinde doğdu. Küçük yaşta Barcelona'ya katılarak rekorlar kırdı.</p>
                 </div>
             </div>
         </section>
