@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakan'ın Dünyası</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Hakan'ın Dünyası Logo" class="logo">
+        <h1>Hakan'ın Dünyasına Hoş Geldiniz!</h1>
+        <p class="subtitle">Hem eğlenceli hem öğretici bir site!</p>
+        <nav>
+            <ul>
+                <li><a href="#hakkimda">Hakkımda</a></li>
+                <li><a href="#oyun-tuyolari">Oyun Tüyoları</a></li>
+                <li><a href="#eglence">Eğlence</a></li>
+                <li><a href="#oyun-videolari">Oyun Videoları</a></li>
+                <li><a href="#haberler">Haberler</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="hakkimda">
+            <div class="section-header">
+                <img src="https://placehold.co/60x60?text=👦" alt="Hakkımda" class="section-photo">
+                <h2 onclick="toggleSection('about-details')" class="toggle-heading">Hakkımda</h2>
+            </div>
+            <div id="about-details" class="toggle-content">
+                <p>Ben Hakan, 10 yaşındayım. Roblox ve Minecraft oynamayı çok seviyorum.</p>
+            </div>
+        </section>
+        <section id="oyun-tuyolari">
+            <div class="section-header">
+                <img src="https://placehold.co/60x60?text=🎮" alt="Oyun Tüyoları" class="section-photo">
+                <h2>Oyun Tüyoları</h2>
+            </div>
+            <div>
+                <h3 onclick="toggleSection('minecraft-tips')" class="toggle-heading">Minecraft</h3>
+                <div id="minecraft-tips" class="toggle-content">
+                    <ul>
+                        <li>Minecraft’ta gizli geçit yapmak için yapışkan piston ve gizli kapı kullanabilirsin!</li>
+                    </ul>
+                    <button class="show-answer-btn" onclick="showGameAnswer('minecraft-tips', 'Cevap: Yapışkan pistonları ve gizli kapı bloklarını kullan!')">Cevabı Göster</button>
+                    <div class="game-answer" id="answer-minecraft-tips"></div>
+                    <h4 onclick="toggleSection('mc-genel-komutlar')" class="toggle-heading">🧪 Genel Komutlar</h4>
+                    <div id="mc-genel-komutlar" class="toggle-content">
+                        <ul>
+                            <li>/help [komut]: Bir komut hakkında bilgi verir.</li>
+                            <li>/kill [oyuncu]: Belirlenen oyuncuyu anında öldürür.</li>
+                            <li>/gamerule keepInventory true: Öldüğünüzde eşyalarınız sizde kalır.</li>
+                            <li>/gamemode creative: Yaratıcı moda geçer.</li>
+                            <li>/gamemode survival: Hayatta kalma moduna geçer.</li>
+                        </ul>
+                    </div>
+                    <h4 onclick="toggleSection('mc-zaman-hava')" class="toggle-heading">⏰ Zaman ve Hava Durumu</h4>
+                    <div id="mc-zaman-hava" class="toggle-content">
+                        <ul>
+                            <li>/time: Günün saatini ayarlama.</li>
+                            <li>/weather [süre]: Hava durumunu değiştirme.</li>
+                            <li>/gamerule doDaylightCycle false: Gündüz/gece döngüsünü durdurur.</li>
+                        </ul>
+                    </div>
+                    <h4 onclick="toggleSection('mc-ozel-efektler')" class="toggle-heading">🪄 Özel Efektler ve Özellikler</h4>
+                    <div id="mc-ozel-efektler" class="toggle-content">
+                        <ul>
+                            <li>/summon [obje]: Obje çağırma.</li>
+                            <li>/effect: Oyuncuya etki verme veya kaldırma.</li>
+                            <li>/instantmine: Her şeyi tek tıkla kazma.</li>
+                            <li>/instantplant: Bitkiler anında büyür.</li>
+                        </ul>
+                    </div>
+                    <h4 onclick="toggleSection('mc-hasar-guvenlik')" class="toggle-heading">💥 Hasar ve Güvenlik</h4>
+                    <div id="mc-hasar-guvenlik" class="toggle-content">
+                        <ul>
+                            <li>/falldamage: Düşme hasarı aç/kapa.</li>
+                            <li>/firedamage: Yangın hasarı aç/kapa.</li>
+                            <li>/waterdamage: Su hasarı aç/kapa.</li>
+                        </ul>
+                    </div>
+                    <h4 onclick="toggleSection('mc-blok-dunya')" class="toggle-heading">🧱 Blok ve Dünya</h4>
+                    <div id="mc-blok-dunya" class="toggle-content">
+                        <ul>
+                            <li>/fill: Alanı blokla doldurur.</li>
+                            <li>/atlantis: Dünya suyla dolar.</li>
+                            <li>/locate [yapı]: Yapıların koordinatlarını verir.</li>
+                            <li>/clearspawnpoint: Doğma noktasını sıfırlar.</li>
+                        </ul>
+                    </div>
+                    <h4 onclick="toggleSection('mc-esya-envanter')" class="toggle-heading">🧰 Eşyalar ve Envanter</h4>
+                    <div id="mc-esya-envanter" class="toggle-content">
+                        <ul>
+                            <li>/give [oyuncu] [eşya] [adet]: Ücretsiz eşya verir.</li>
+                            <li>/duplicate: Eşyayı kopyalar.</li>
+                            <li>/dropstore: Envanteri sandıkta saklar.</li>
+                            <li>/itemdamage: Eşyalar artık bozulmaz.</li>
+                        </ul>
+                    </div>
+                    <h4 onclick="toggleSection('mc-isinlanma')" class="toggle-heading">🗺️ Işınlanma ve Konum Komutları</h4>
+                    <div id="mc-isinlanma" class="toggle-content">
+                        <ul>
+                            <li>/tp [oyuncu] [x y z]: Işınlanma.</li>
+                            <li>/summon [canavar] [x y z]: Belirli konumda canavar oluşturma.</li>
+                            <li>/experience add [oyuncu] [miktar]: XP puanı ekler.</li>
+                            <li>/difficulty [kolay/zor]: Oyun zorluğunu değiştirir.</li>
+                        </ul>
+                    </div>
+                    <h4 onclick="toggleSection('mc-hile-acma-java')" class="toggle-heading">🟢 Minecraft Hilelerini Açma (Java Edition)</h4>
+                    <div id="mc-hile-acma-java" class="toggle-content">
+                        <b>🔧 Yeni Dünya Oluştururken</b>
+                        <ol>
+                            <li>Minecraft’ı aç ve “Tek Oyunculu”ya tıkla.</li>
+                            <li>“Yeni Dünya Oluştur”a gir.</li>
+                            <li>“Hilelere İzin Ver” seçeneğini aç.</li>
+                            <li>“Yeni Dünya Yarat”a tıklayarak oyuna başla.</li>
+                            <li>Oyun içindeyken T tuşuna basıp komutu yaz.</li>
+                        </ol>
+                        <b>🔄 Var Olan Dünyada Açmak İçin</b>
+                        <ol>
+                            <li>Oyun içindeyken ESC’ye bas ve “LAN'a Aç” seçeneğine tıkla.</li>
+                            <li>“Hilelere İzin Ver”i aktif hale getir.</li>
+                            <li>“LAN Dünyasını Başlat”a tıkla.</li>
+                            <li>Artık hileleri kullanabilirsin.</li>
+                        </ol>
+                        <i>Not: Oyundan çıktığında hileler tekrar kapanır. Her girişte yeniden açman gerekir.</i>
+                    </div>
+                    <h4 onclick="toggleSection('mc-hile-acma-bedrock')" class="toggle-heading">📱 Bedrock Edition’da Hileleri Açmak</h4>
+                    <div id="mc-hile-acma-bedrock" class="toggle-content">
+                        <b>🕹️ Yeni Dünya İçin</b>
+                        <ol>
+                            <li>Minecraft’ı aç, “Oyna”ya tıkla.</li>
+                            <li>“Yeni Oluştur” > “Yeni Dünya Oluştur”.</li>
+                            <li>Ayarlarda “Hilelere İzin Ver” seçeneğini aç.</li>
+                            <li>“Oluştur”a tıkla.</li>
+                        </ol>
+                        <b>🔄 Mevcut Dünya İçin</b>
+                        <ol>
+                            <li>Ayarlar > Oyun Menüsü > Hileleri Etkinleştir.</li>
+                            <li>Aktifleştirdikten sonra / ile sohbet kutusunu açarak komut yazabilirsin.</li>
+                            <li>Hileleri kapatmak istersen aynı menüden devre dışı bırak.</li>
+                        </ol>
+                        <i>Uyarı: Hileler açıkken kazanımlar (achievements) devre dışı olur.</i>
+                    </div>
+                    <h4 onclick="toggleSection('mc-hileler-ne-ise-yarar')" class="toggle-heading">🧠 Minecraft Hileleri Ne İşe Yarar?</h4>
+                    <div id="mc-hileler-ne-ise-yarar" class="toggle-content">
+                        <ul>
+                            <li>Oyun dünyasını kolayca kontrol edebilirsin.</li>
+                            <li>Hava, saat ve modları değiştirebilirsin.</li>
+                            <li>Eşyaları çoğaltabilir veya ölümsüz olabilirsin.</li>
+                            <li>Yapılar bulabilir ve doğrudan ışınlanabilirsin.</li>
+                        </ul>
+                    </div>
+                </div>
+                <h3 onclick="toggleSection('roblox-tips')" class="toggle-heading">Roblox</h3>
+                <div id="roblox-tips" class="toggle-content">
+                    <ul>
+                        <li>Roblox’ta yeni başlayanlar için: Arkadaşlarınla birlikte oynayarak daha fazla ödül kazanabilirsin.</li>
+                    </ul>
+                    <button class="show-answer-btn" onclick="showGameAnswer('roblox-tips', 'Cevap: Arkadaşlarınla takım kur ve birlikte görev yap!')">Cevabı Göster</button>
+                    <div class="game-answer" id="answer-roblox-tips"></div>
+                </div>
+            </div>
+        </section>
+        <section id="eglence">
+            <div class="section-header">
+                <img src="https://placehold.co/60x60?text=🎲" alt="Eğlence" class="section-photo">
+                <h2>Eğlence</h2>
+            </div>
+            <h3 onclick="toggleSection('minigame-content')" class="toggle-heading">Taş-Kağıt-Makas Mini Oyun</h3>
+            <div id="minigame-content" class="toggle-content">
+                <div class="minigame">
+                    <h4>Taş-Kağıt-Makas Oyna!</h4>
+                    <div id="rps-game">
+                        <button onclick="playRPS('taş')">Taş</button>
+                        <button onclick="playRPS('kağıt')">Kağıt</button>
+                        <button onclick="playRPS('makas')">Makas</button>
+                        <p id="rps-result"></p>
+                    </div>
+                    <button class="show-answer-btn" onclick="showGameAnswer('minigame-content', 'Cevap: Bilgisayarın seçimini görmek için bir hamle yap!')">Cevabı Göster</button>
+                    <div class="game-answer" id="answer-minigame-content"></div>
+                </div>
+            </div>
+            <h3 onclick="toggleSection('wordle-content')" class="toggle-heading">Kelime Tahmin (Wordle)</h3>
+            <div id="wordle-content" class="toggle-content">
+                <div class="minigame">
+                    <h4>5 Harfli Türkçe Kelimeyi Tahmin Et!</h4>
+                    <input type="text" id="wordle-input" maxlength="5" placeholder="Tahminini yaz" style="text-transform:uppercase">
+                    <button onclick="playWordle()">Tahmin Et</button>
+                    <div id="wordle-feedback"></div>
+                    <div id="wordle-history"></div>
+                    <button class="show-answer-btn" onclick="showGameAnswer('wordle-content', 'Cevap: ' + wordleTarget)">Cevabı Göster</button>
+                    <div class="game-answer" id="answer-wordle-content"></div>
+                </div>
+            </div>
+            <h3 onclick="toggleSection('crossword-content')" class="toggle-heading">Mini Çengel Bulmaca</h3>
+            <div id="crossword-content" class="toggle-content">
+                <div class="minigame">
+                    <h4>Çengel Bulmaca</h4>
+                    <div id="crossword-board"></div>
+                    <div id="crossword-clues"></div>
+                    <button class="show-answer-btn" onclick="showGameAnswer('crossword-content', 'Cevaplar: KEDİ, ARABA, ELMA')">Cevabı Göster</button>
+                    <div class="game-answer" id="answer-crossword-content"></div>
+                </div>
+            </div>
+            <h3 onclick="toggleSection('puzzle-content')" class="toggle-heading">Parça Birleştirme (Puzzle)</h3>
+            <div id="puzzle-content" class="toggle-content">
+                <div class="minigame">
+                    <h4>Parçaları Sürükleyip Doğru Yere Bırak!</h4>
+                    <div id="puzzle-board"></div>
+                    <button class="show-answer-btn" onclick="showGameAnswer('puzzle-content', 'Cevap: 🦊 🐱 🐶 🐻 sırasıyla dizilmeli!')">Cevabı Göster</button>
+                    <div class="game-answer" id="answer-puzzle-content"></div>
+                </div>
+            </div>
+        </section>
+        <section id="oyun-videolari">
+            <div class="section-header">
+                <img src="https://placehold.co/60x60?text=📺" alt="Oyun Videoları" class="section-photo">
+                <h2 onclick="toggleSection('video-content')" class="toggle-heading">Oyun Videoları</h2>
+            </div>
+            <div id="video-content" class="toggle-content">
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+        <section id="haberler">
+            <div class="section-header">
+                <img src="https://placehold.co/60x60?text=📰" alt="Haberler" class="section-photo">
+                <h2 onclick="toggleSection('news-content')" class="toggle-heading">Haberler</h2>
+            </div>
+            <div id="news-content" class="toggle-content">
+                <ul>
+                    <li>Yeni Minecraft güncellemesi geldi!</li>
+                    <li>Roblox’ta yeni bir oyun keşfettim!</li>
+                    <li>Arkadaşım Ahmet ile birlikte yeni bir harita yaptık.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 Hakan - Tüm hakları saklıdır.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
